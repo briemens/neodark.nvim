@@ -38,12 +38,15 @@ function base.setup(palette)
     ColorColumn = { fg = palette.none, bg = palette.grey_4 },
     CursorLineNr = { fg = palette.fg, bg = palette.none },
     Conceal = { fg = palette.grey, bg = palette.none },
-    CursorColumn = { fg = palette.none, bg = palette.grey_4 },
-    CursorLine = { fg = palette.none, bg = palette.grey_8 },
+    -- CursorColumn = { fg = palette.none, bg = palette.grey_4 },
+    CursorLine = { fg = palette.none, bg = palette.bgfill_1 },
     Directory = { fg = palette.blue, bg = palette.none },
     DiffAdd = { fg = palette.grey_3, bg = palette.green },
+    DiffAdded = { fg = palette.green, bg = palette.none },
     DiffChange = { fg = palette.yellow, bg = palette.none },
+    DiffChanged = { fg = palette.yellow, bg = palette.none },
     DiffDelete = { fg = palette.grey_3, bg = palette.red },
+    DiffRemoved = { fg = palette.red, bg = palette.none },
     DiffText = { fg = palette.grey_3, bg = palette.yellow },
     ErrorMsg = { fg = palette.red, bg = palette.none },
     VertSplit = { fg = palette.black, bg = palette.none },
@@ -80,6 +83,17 @@ function base.setup(palette)
     EndOfBuffer = { fg = palette.bg, bg = palette.none },
     FloatBorder = { bg = palette.none },
     MatchParen = { fg = palette.none, bg = palette.grey_5 },
+    ALEError = { bg=palette.red_1, style='undercurl', fg=palette.bgfill },
+    ALEErrorLine = { bg=palette.red_1, fg=palette.bgfill },
+    CocErrorHighlight = { bg=palette.red_1, fg=palette.bgfill },
+    ALEWarning = { bg=palette.green1,  style='undercurl', fg=palette.bgfill },
+    ALEWarningLine = { bg=palette.red_1, fg=palette.bgfill },
+    CocWarningHighlight = { bg=palette.green_1,  fg=palette.bgfill },
+    ALEErrorSign = { fg=palette.red_1 },
+    ALEWarningSign = { fg=palette.green_1 },
+    CursorColumn = { fg=palette.none, bg=palette.none, style='inverse' },
+    CocHiglightText = { fg=palette.none, bg=palette.none, style='inverse' }
+-- link CocErrorFloat Normal
   }
 
   return base_
